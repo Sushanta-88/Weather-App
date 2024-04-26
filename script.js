@@ -1,13 +1,13 @@
 const apiKeyForCurrentWeather = "19657389b5a92bc90f4c4b40dc08d087";
 const apiKeyForWeatherForecast = "d8142cd9d13741babad589eaacb6a8d8";
 const urlForCurrentWeather = "https://api.openweathermap.org/data/2.5/weather?q=";
-const urlForWeatherForcast = "https://api.weatherbit.io/v2.0/forecast/daily?city=";
+const urlForWeatherForecast = "https://api.weatherbit.io/v2.0/forecast/daily?city=";
 const inputBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 
 async function weather(city){
     const currentWeatherResponse = await fetch(urlForCurrentWeather + city + "&units=metric&appid=" + apiKeyForCurrentWeather);
-    const forecastWeatherResponse = await fetch(urlForWeatherForcast + city + "&key=" + apiKeyForWeatherForecast);
+    const forecastWeatherResponse = await fetch(urlForWeatherForecast + city + "&key=" + apiKeyForWeatherForecast);
     if(!currentWeatherResponse.ok){
         alert("No weather found");
     }
