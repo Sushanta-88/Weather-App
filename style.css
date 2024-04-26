@@ -1,86 +1,116 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-image: url('https://source.unsplash.com/random/1600x900/?landcape');
-    color: white;
-    font-size: 125%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://source.unsplash.com/random/1600x900/?landcape");
+  color: white;
+  font-size: 125%;
 }
-.container{
-    height: 400px;
-    width: 400px;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 13, 0.85); 
+.container {
+  height: 90vh;
+  width: 400px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 13, 0.85);
 }
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- input.search-bar {
-    border: none;
-    outline: none;
-    padding: 0.4em 1em;
-    border-radius: 24px;
-    background: #7c7c7c2b;
-    color: white;
-    font-family: inherit;
-    font-size: 100%;
-    text-transform: capitalize;
-    width: calc(100% - 100px);  
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 100%;
+  text-transform: capitalize;
+  width: calc(100% - 100px);
 }
 button {
-    margin: 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 44px;
-    width: 44px;
-    outline: none;
-    background: #7c7c7c2b;
-    color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
-h1,h2{
-    margin: 25px 0px;
+h2,
+h3 {
+  margin: 5px 0px;
+}
+.date {
+  font-size: 0.6em;
 }
 .flex {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-.description{
-    text-transform: capitalize;
+.description {
+  text-transform: capitalize;
 }
-.humidity,.wind{
-    margin: 16px 0px;
+.humidity,
+.wind {
+  margin: 16px 0px;
 }
-.weather.loading{
-    visibility: hidden;
-    max-width: 20px;
-    position: relative;
+.forecast-card {
+  display: flex;
+  justify-content: space-around;
 }
-.weather.loading:after{
-    visibility: visible;
-    content: "Loading...";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
+.forecast-card img {
+  width: 37px;
+  margin-left: 12px;
+}
+.temp-2 {
+  font-size: 13px;
+  margin: 15px;
+}
+.dates {
+  padding-top: 1px;
+  font-size: 12px;
+}
+.card {
+  padding: 2px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 6px #7e7e7e;
 }
 
-@media (max-width: 465px){
-   body{
-    padding: 2%;
-   } 
+.weather.loading {
+  visibility: hidden;
+  max-width: 20px;
+  position: relative;
 }
-@media (max-width: 402px){
-    body{
-     padding: 2%;
-     font-size: 98%;
-    } 
- }
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+@media (max-width: 465px) {
+  body {
+    padding: 2%;
+  }
+  .forecast {
+    display: none;
+  }
+}
+@media (max-width: 402px) {
+  body {
+    padding: 2%;
+    font-size: 98%;
+  }
+}
