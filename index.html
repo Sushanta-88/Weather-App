@@ -1,35 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="search">
-            <input type="text" class="search-bar" placeholder="Enter city name">
-            <button onclick="search()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-              </svg></button>
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Enter city name" />
+        <button onclick="search()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="weather loading">
+        <h3 class="city"></h3>
+        <h2 class="temp"></h2>
+        <span class="date">26/04/2024</span>
+        <div class="flex">
+          <img
+            src="https://openweathermap.org/img/wn/04n.png"
+            alt=""
+            class="icon"
+          />
+          <div class="description"></div>
         </div>
-        <div class="weather loading">
-            <h2 class="city"></h2>
-            <h1 class="temp"></h1>
-            <div class="flex">
-              <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-              <div class="description"></div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+        <div class="forecast">
+          <h5>5 Days Forecast</h5>
+          <div class="forecast-card">
+            <div class="card">
+              <div class="date-0 dates">24/04/06</div>
+              <div>
+                <img
+                  src="https://cdn.weatherbit.io/static/img/icons/c01d.png"
+                  alt=""
+                  class="d0"
+                />
+              </div>
+              <div class="max-temp-0 temp-2"></div>
+              <div class="min-temp-0 temp-2"></div>
             </div>
-            <div class="humidity"></div>
-            <div class="wind"></div>
+            <div class="card">
+              <div class="date-1 dates">24/04/06</div>
+              <div>
+                <img
+                  src="https://cdn.weatherbit.io/static/img/icons/c01d.png"
+                  alt=""
+                  class="d1"
+                />
+              </div>
+              <div class="max-temp-1 temp-2"></div>
+              <div class="min-temp-1 temp-2"></div>
+            </div>
+            <div class="card">
+              <div class="date-2 dates">24/04/06</div>
+              <div>
+                <img
+                  src="https://cdn.weatherbit.io/static/img/icons/c01d.png"
+                  alt=""
+                  class="d2"
+                />
+              </div>
+              <div class="max-temp-2 temp-2"></div>
+              <div class="min-temp-2 temp-2"></div>
+            </div>
+            <div class="card">
+              <div class="date-3 dates">24/04/06</div>
+              <div>
+                <img
+                  src="https://cdn.weatherbit.io/static/img/icons/c01d.png"
+                  alt=""
+                  class="d3"
+                />
+              </div>
+              <div class="max-temp-3 temp-2"></div>
+              <div class="min-temp-3 temp-2"></div>
+            </div>
+            <div class="card">
+              <div class="date-4 dates">24/04/06</div>
+              <div>
+                <img
+                  src="https://cdn.weatherbit.io/static/img/icons/c01d.png"
+                  alt=""
+                  class="d4"
+                />
+              </div>
+              <div class="max-temp-4 temp-2"></div>
+              <div class="min-temp-4 temp-2"></div>
+            </div>
+          </div>
         </div>
-    </div> 
-
-    
-</body>
+      </div>
+    </div>
+  </body>
 </html>
